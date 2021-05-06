@@ -22,10 +22,7 @@ class MainActivity : AppCompatActivity() {
         viewModel = ViewModelProvider(this, viewModelFactory).get(MainViewModel::class.java)
         viewModel.getPost()
         viewModel.myResponse.observe(this, Observer { response ->
-            Log.d("Response", response.userId.toString())
-            Log.d("Response", response.id.toString())
-            Log.d("Response", response.title)
-            Log.d("Response", response.body)
+            Log.d("Response", response.quote)
         })
     }
 }
